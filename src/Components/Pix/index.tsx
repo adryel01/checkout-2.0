@@ -15,11 +15,17 @@ export function PixGenerator() {
     useEffect(() => {
         if (contador == 0) {
             setTimePayment('Pagamento realizado com sucesso!')
+			
         }
         setTimeout(() => {
             setContador(contador - 1)
         }, 1000)
+		
     }, [contador])
+
+	useEffect(()=>{
+		console.log(localStorage.getItem('product'))
+	},[])
 
     const texto: string = `00020126360014BR.GOV.BCB.PIX0114+5562993716245520400005303986540589.005802BR5912Adryel Cesar6007Goiania62160512PAGAMENTO2076304508D`
 
